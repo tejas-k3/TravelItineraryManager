@@ -6,8 +6,11 @@ public class Activity {
     private int price;
     private int capacity;
     private int currentCapacity;
-    public Activity(String name) {
+    public Activity(String name, int price, int capacity) {
         this.name = name;
+        this.price = price;
+        this.capacity = capacity;
+        this.currentCapacity = capacity;
     }
 
     public String getName() {
@@ -51,6 +54,6 @@ public class Activity {
     }
 
     public boolean isCapacityFull() {
-        return (this.currentCapacity == this.capacity);
+        return (this.currentCapacity == 0);
     }
 }

@@ -7,7 +7,7 @@ public class ActivityTest {
 
     @BeforeEach
     public void setUp() {
-        activity = new Activity("Filler");
+        activity = new Activity("Filler", 100, 20);
     }
 
     @Test

@@ -12,7 +12,7 @@ public class DestinationTest {
     @BeforeEach
     public void setUp() {
         destination = new Destination("Filler");
-        activity = new Activity("Walk");
+        activity = new Activity("Walk", 100, 10);
     }
 
     @Test
@@ -30,8 +30,8 @@ public class DestinationTest {
     @Test
     public void testGetActivities() {
         List<Activity> activities = new ArrayList<>();
-        activities.add(new Activity("Running"));
-        activities.add(new Activity("Walking"));
+        activities.add(new Activity("Running", 100, 10));
+        activities.add(new Activity("Walking", 100, 35));
         destination.setActivities(activities);
         Assertions.assertEquals(2, destination.getActivities().size());
     }
@@ -39,8 +39,8 @@ public class DestinationTest {
     @Test
     public void testSetActivities() {
         List<Activity> activities = new ArrayList<>();
-        activities.add(new Activity("Running"));
-        activities.add(new Activity("Walking"));
+        activities.add(new Activity("Running", 100, 10));
+        activities.add(new Activity("Walking", 100, 35));
         destination.setActivities(activities);
         Assertions.assertEquals(2, destination.getActivities().size());
     }
