@@ -39,7 +39,11 @@ public class TravelPackage {
     }
 
     public void addPassenger(Passenger passenger) {
-        this.passengers.add(passenger);
+        if(this.passengerCapacity>0)
+        {
+            this.passengers.add(passenger);
+            this.passengerCapacity--;
+        }
     }
 
     public void printItinerary() {
