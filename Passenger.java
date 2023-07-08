@@ -15,6 +15,7 @@ public class Passenger {
         this.number = number;
         this.type = type;
         this.balance = balance;
+        this.signedUpActivities = new ArrayList<>();
     }
 
     public String getName() {
@@ -58,9 +59,6 @@ public class Passenger {
     }
 
     public void addActivity(Activity activity) {
-        if (this.signedUpActivities == null) {
-            this.signedUpActivities = new ArrayList<>();
-        }
         signedUpActivities.add(activity);
     }
 

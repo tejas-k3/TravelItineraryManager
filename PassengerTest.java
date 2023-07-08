@@ -104,8 +104,8 @@ public class PassengerTest {
     @Test
     public void testGetSignedUpActivities() {
         List<Activity> activities = new ArrayList<>();
-        activities.add(new Activity("Walking"));
-        activities.add(new Activity("Running"));
+        activities.add(new Activity("Running", 100, 10));
+        activities.add(new Activity("Walking", 100, 35));
         for(Activity activity:activities) {
             goldPassenger.addActivity(activity);
         }
