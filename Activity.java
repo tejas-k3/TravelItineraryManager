@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+
 public class Activity {
     private String name;
     private String description;
     private int price;
     private int capacity;
     private int currentCapacity;
+    public Activity(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -43,5 +48,9 @@ public class Activity {
 
     public void setCurrentCapacity(int currentCapacity) {
         this.currentCapacity = currentCapacity;
+    }
+
+    public boolean isCapacityFull() {
+        return (this.currentCapacity == this.capacity);
     }
 }
