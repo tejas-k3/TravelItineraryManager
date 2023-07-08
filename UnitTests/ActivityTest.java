@@ -1,7 +1,9 @@
+package UnitTests;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import src.*;
 public class ActivityTest {
     private Activity activity;
 
@@ -71,7 +73,7 @@ public class ActivityTest {
     }
     @Test
     public void testisCapacityFull() {
-        activity.setCurrentCapacity(5);
+        activity.setCurrentCapacity(0);
         activity.setCapacity(5);
         Assertions.assertTrue(activity.isCapacityFull());
     }

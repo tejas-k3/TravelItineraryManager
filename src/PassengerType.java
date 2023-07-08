@@ -1,3 +1,4 @@
+package src;
 // Passenger Type enum
 public enum PassengerType {
     STANDARD {

@@ -1,3 +1,4 @@
+package src;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Passenger {
     private int balance;
     private List<Activity> signedUpActivities;
 
-    Passenger(String name, int number, PassengerType type, int balance) {
+    public Passenger(String name, int number, PassengerType type, int balance) {
         this.name = name;
         this.number = number;
         this.type = type;
