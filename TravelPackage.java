@@ -26,6 +26,10 @@ public class TravelPackage {
         return this.itinerary;
     }
 
+    public void setItinerary(List<Destination> itineraries) {
+        this.itinerary = itineraries;
+    }
+
     public List<Passenger> getPassengers() {
         return this.passengers;
     }
@@ -86,6 +90,18 @@ public class TravelPackage {
             }
         } else {
             System.out.println("No Activities Signed Up.");
+        }
+    }
+    public void activitySignup(Passenger passenger, Activity activity) {
+        int activityPrice = activity.getPrice();
+        if(!passenger.isBalanceExceeded(activityPrice)&&!activity.isCapacityFull())
+        {
+            // Adding activity to passenger's signed ones.
+            passenger.addActivity(activity);
+            // Updating the passenger's balance
+            passenger.updateBalance(-activityPrice);
+            // Updating the activity's capacity.
+            activity.setCurrentCapacity(activity.getCurrentCapacity()-1);
         }
     }
 
